@@ -6,6 +6,11 @@ export default {
   ],
   theme: {
     extend: {},
+    fontFamily:{
+      smallertext:["Bungee Inline"],
+      bigtext:["Pragati Narrow"],
+      // textstyle:["Bebas Neue"]
+    },
   },
   plugins: [],
 }
