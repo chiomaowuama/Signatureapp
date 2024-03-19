@@ -9,7 +9,7 @@ export default {
     fontFamily:{
       smallertext:["Bungee Inline"],
       bigtext:["Pragati Narrow"],
-      // textstyle:["Bebas Neue"]
+      textstyle:["Beau Rivage"]
     },
   },
   plugins: [],

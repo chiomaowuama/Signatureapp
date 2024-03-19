@@ -1,6 +1,7 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Inline&family=Oswald:wght@200..700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Pragati+Narrow:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Beau+Rivage&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -22,19 +23,19 @@
 
 /* navber */
 .header{
-  /* position:fixed; */
-  /* top:0; */
-  /* left:0; */
-  /* width:100%; */
-  /* padding:20px 100px; */
+  position:fixed;
+  top:0;
+  left:0;
+  width:100%;
+  padding:20px 100px;
   background: rgba(255, 255, 255, .1);
-  /* display:flex; */
-  /* justify-content: space-between; */
-  /* align-items: center; */
+  display:flex;
+  justify-content: space-between;
+  align-items: center;
   backdrop-filter:blur(10px) ;
   border-bottom: 2px solid rgba(255, 255, 255, 0.13);
 }
-/* .header::before{
+.header::before{
   content: '';
   position: absolute;
   top: 0;
@@ -43,10 +44,10 @@
   height: 100%;
   transition: .5s ease;
   background: linear-gradient(90deg, transparent, rgba(255, 255, 255, .2), transparent);
-} */
-/* .header:hover::before{
+}
+.header:hover::before{
   left: 100%;
-} */
+}
 /* .logo{
   color:#fff;
   font-size: 25px;
@@ -54,16 +55,16 @@
   font-weight: 600;
   cursor: default;
 } */
-/* .navbar a{
+.navbar a{
 color:#fff;
 font-size: 18px;
 text-decoration: none;
 margin-left: 35px;
 transition: .3s ease;
-} */
-/* .navbar a:hover{
+}
+.navbar a:hover{
   color:#f00;
 font-size: 18px;
 text-decoration: none;
 margin-left: 35px;
-} */
+}
