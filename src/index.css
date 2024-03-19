@@ -1,3 +1,17 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.landscape{
+  
+}
+.landscapes{
+  /* border:2px solid red; */
+  background-image: url('https://images.unsplash.com/photo-1502581827181-9cf3c3ee0106?q=80&w=1988&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D');
+  background-repeat: no-repeat;
+ 
+  background-position-x: 75%;
+  background-position-y: 65%;
+  background-size:cover;
+  overflow: hidden;  
+}
