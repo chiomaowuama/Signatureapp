@@ -8,6 +8,7 @@ import { Route,RouterProvider, createBrowserRouter, createRoutesFromElements } f
 import Home from './component/Home.jsx';
 import NewDocument from './component/NewDocument.jsx';
 import AllDocument from './component/AllDocument.jsx';
+import SavedDocument from './component/SavedDocument.jsx';
 
 const router = createBrowserRouter(
   createRoutesFromElements(
@@ -15,6 +16,7 @@ const router = createBrowserRouter(
     <Route path='' element={<Home />}/>
     <Route path='NewDocument' element={<NewDocument />}/>
     <Route path='AllDocument' element={<AllDocument />}/>
+    <Route path='SavedDocument' element={<SavedDocument />}/>
 
    </Route>
   )
