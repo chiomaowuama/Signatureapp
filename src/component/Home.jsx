@@ -14,8 +14,9 @@ function Home() {
         </div>
         <div className='w-4/6  relative  -bottom-14 left-1'>
             <div className='hexagon rotate-90  absolute shadow-xl  '> 
+            <span></span>
             </div>
-            <p className='absolute top-2 left-3 font-bigtext font-semibold tracking-wider text-2xl cursor-pointer hover:text-red-700 text-white'>clickhere</p>
+            {/* <p className='absolute top-2 left-3 font-bigtext font-semibold tracking-wider text-2xl cursor-pointer hover:text-red-700 text-white'>clickhere</p> */}
           </div>
       </div>
         

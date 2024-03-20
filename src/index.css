@@ -82,6 +82,7 @@ margin-left: 35px;
   border-radius: 7%;
 
 }
+
 .hexagon::before{
 bottom: 99.9%;
 border-bottom: 30px solid rgb(31, 31, 44);
@@ -93,3 +94,24 @@ border-radius: 7%;
   border-top:30px solid  rgb(31, 31, 44);
   border-radius: 7%;
 }
+/* .hexagon::before,
+.hexagon::after {
+  content: '';
+  position: absolute;
+  width:0;
+  border-left: 50px solid transparent;
+  border-right: 50px solid transparent;
+  border-radius: 7%;
+
+} */
+/* .hexagon::before{
+bottom: 99.9%;
+border-bottom: 30px solid rgb(31, 31, 44);
+border-radius: 7%;
+
+}
+.hexagon::after{
+  top:100%;
+  border-top:30px solid  rgb(31, 31, 44);
+  border-radius: 7%;
+} */
