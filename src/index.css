@@ -7,9 +7,7 @@
 @tailwind components;
 @tailwind utilities;
 
-.landscape{
-  
-}
+
 .landscapes{
   /* border:2px solid red; */
   background-image: url('https://img.freepik.com/free-vector/dark-hexagonal-background-with-gradient-color_79603-1409.jpg?w=900&t=st=1710856406~exp=1710857006~hmac=8b0e7b85675a5a9673be5dd64cee0e6c76ad41860bf8c685dc403d7fcb5650f8');
