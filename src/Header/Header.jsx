@@ -11,9 +11,9 @@ function Header() {
       {/* <Link to="/Home"  className='logo text-white font-bigtext  text-base font-semibold cursor-default  lg:ml-4 '>
       SIGNATURE             
       </Link> */}
-      <NavLink to="/"  className='logo text-white font-bigtext  text-base font-semibold cursor-default  lg:ml-4'>
+      <Link to="/"  className='logo text-white font-bigtext  text-base font-semibold cursor-default  lg:ml-4'>
       SIGNATURE             
-        </NavLink>
+        </Link>
       
       </div>
       <div className='navbar w-3/5 flex justify-around lg:justify-end items-center   lg:gap-4 text-center font-bigtext font-semibold'>
