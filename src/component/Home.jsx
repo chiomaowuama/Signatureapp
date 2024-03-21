@@ -14,9 +14,22 @@ function Home() {
         </div>
         <div className='w-4/6  relative  -bottom-14 left-1'>
             <div className='hexagon rotate-90  absolute shadow-xl  '> 
-            <span></span>
             </div>
-            {/* <p className='absolute top-2 left-3 font-bigtext font-semibold tracking-wider text-2xl cursor-pointer hover:text-red-700 text-white'>clickhere</p> */}
+            <div className='absolute -top-3 left-0'>
+            <div className='movinglight'>
+            <span className='span'></span>
+            {/* https://metatags.io/ */}
+            {/* npm install vue-meta@^3.0.0-alpha.10 */}
+            {/* import { useMeta } from 'vue-meta'
+
+            useMeta({
+              title: 'Home',
+              description: 'Something in you',
+            }) */}
+
+            </div>
+            </div>
+            <p className='absolute top-2  z-10 left-2 font-bigtext font-semibold tracking-wider text-2xl cursor-pointer hover:text-red-700 text-white'>clickhere</p>
           </div>
       </div>
         
