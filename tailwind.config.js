@@ -12,6 +12,8 @@ export default {
       textstyle:["Beau Rivage"]
     },
   },
-  plugins: [],
+  plugins: [
+    require("tailwind-scrollbar"),
+  ],
 }
 

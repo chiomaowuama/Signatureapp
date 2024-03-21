@@ -4,8 +4,8 @@ function NewDocument() {
   return (
     <>
       <div  className='landscape w-full h-screen'>
-        <div className='landscapes   w-full h-full flex  flex-col justify-center items-center '>
-            <form className='border-2 border-red-700'>
+        <div className='landscapes   w-full h-full flex flex-col justify-center items-center overflow-scroll'>
+            <form className='border-2 border-red-700 '>
               <div className='border-2 border-green-900 flex flex-col'>
                 <label htmlFor="">FirstName</label>
                 <input type="text" name="" id="" />
