@@ -1,10 +1,11 @@
 import React from 'react'
 import { useForm } from 'react-hook-form'
+import { DevTool } from '@hookform/devtools'
 
 
 function NewDocument() {
     const form = useForm()
- const { register} = form
+ const { register, control} = form
   console.log(register)
   return (
     <>
@@ -50,6 +51,7 @@ function NewDocument() {
           </div>
         </div>
       </div>
+      <DevTool control={control}/>
     </>
   )
 }
