@@ -27,7 +27,7 @@ function AllDocument() {
             <p className='absolute top-2  z-10 left-2 font-bigtext font-semibold tracking-wider text-2xl cursor-pointer hover:text-red-700 text-white'>clickhere</p>
           </div>} >
             {/* <h1 className='w-full p-4 bg-white text-xl'>hello</h1> */}
-            <SignaturePad canvasProps={{ className:"Signturepad"}} />
+            <SignaturePad canvasProps={{ className:" border-2 border-red-600 bg-white lg:w-full w-4/5  h-96 mx-auto "}} />
             </Popup>
          
       </div>
