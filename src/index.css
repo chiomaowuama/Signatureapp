@@ -155,3 +155,12 @@ border-radius: 7%;
   border-top:30px solid  rgb(31, 31, 44);
   border-radius: 7%;
 }
+
+/* signing page  */
+.Signturepad{
+
+  border:2px solid red;
+  /* min-height: 200px; */
+  background-color: #ffff;
+
+}

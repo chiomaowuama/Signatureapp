@@ -18,7 +18,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-hook-form": "^7.51.1",
-    "react-router-dom": "^6.22.3"
+    "react-router-dom": "^6.22.3",
+    "react-signature-canvas": "^1.0.6",
+    "reactjs-popup": "^2.0.6"
   },
   "devDependencies": {
     "@hookform/devtools": "^4.3.1",
