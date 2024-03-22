@@ -1,6 +1,11 @@
 import React from 'react'
+import { useForm } from 'react-hook-form'
+
 
 function NewDocument() {
+    const form = useForm()
+ const { register} = form
+  console.log(register)
   return (
     <>
       <div  className='landscape w-full h-screen '>
@@ -11,11 +16,11 @@ function NewDocument() {
             <form className=' lg:w-3/5 mx-auto space-y-2'>
               <div className='flex flex-col  space-y-2 '>
                 <label htmlFor=""  className='text-xl pl-2 font-bigtext'>FirstName</label>
-                <input type="text" name="" id=""className='pl-4 rounded-lg text-black outline-none '/>
+                <input type="text" name="" id=""className='pl-4 rounded-lg text-black outline-none ' {...register('username')} />
               </div>
               <div className='flex flex-col space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Surname</label>
-                <input type="text" name="" id="" className='rounded-lg  pl-4 text-black outline-none'/>
+                <input type="text" name="" id="" className='rounded-lg  pl-4 text-black outline-none' {...register('username')}/>
               </div>
               <div className='flex flex-col space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Email</label>
