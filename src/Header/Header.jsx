@@ -14,10 +14,10 @@ function Header() {
       </div>
       <div className='navbar w-3/5 flex justify-around lg:justify-end items-center   lg:gap-4 text-center font-bigtext font-semibold'>
         <NavLink to="NewDocument" className={({isActive}) => `text-white lg:w-1/5 px-2 lg:px-0 ${isActive ? "text-red-700": " text-blue-700" }`}>
-          NEW
+          Signup
         </NavLink>
         <NavLink to="AllDocument" className={({isActive}) => `text-white lg:w-1/5 px-2 lg:px-0 ${isActive ? "text-red-700": " text-blue-700" }`}>
-          DOCUMENT
+          Create
         </NavLink>
         <NavLink to="SavedDocument" className={({isActive}) => `text-white lg:w-1/5 px-2 lg:px-0 ${isActive ? "text-red-700": " text-blue-700" }`}>
           HISTORY
