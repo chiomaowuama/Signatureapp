@@ -17,28 +17,28 @@ function NewDocument() {
             <form className=' lg:w-3/5 mx-auto space-y-2'>
               <div className='flex flex-col  space-y-2 '>
                 <label htmlFor=""  className='text-xl pl-2 font-bigtext'>FirstName</label>
-                <input type="text" name="" id=""className='pl-4 rounded-lg text-black outline-none ' {...register('username')} />
+                <input type="text" name="" id=""className='pl-4 rounded-lg text-black outline-none ' {...register('firstname')} />
               </div>
               <div className='flex flex-col space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Surname</label>
-                <input type="text" name="" id="" className='rounded-lg  pl-4 text-black outline-none' {...register('username')}/>
+                <input type="text" name="" id="" className='rounded-lg  pl-4 text-black outline-none' {...register('surnname')}/>
               </div>
               <div className='flex flex-col space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Email</label>
-                <input type="email" name="" id=""  className='rounded-lg  pl-4 text-black outline-none'/>
+                <input type="email" name="" id=""  className='rounded-lg  pl-4 text-black outline-none' {...register('Email')}/>
               </div>
               <div className='flex flex-col space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Phone</label>
-                <input type="tel" name="" id="" className='rounded-lg  pl-4 text-black outline-none'/>
+                <input type="tel" name="" id="" className='rounded-lg  pl-4 text-black outline-none' {...register('Phoneno')}/>
               </div>
           
               <div className='flex flex-col  space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Date</label>
-                <input type="datetime" name="" id="" className='rounded-xl py-1 pl-4 text-black outline-none'/>
+                <input type="datetime" name="" id="" className='rounded-xl py-1 pl-4 text-black outline-none' {...register('date')}/>
               </div>
               <div className=' flex flex-col  space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Review</label>
-                <textarea name="" id="" cols="30" rows="5" className='rounded-xl py-1 pl-4 text-black outline-none'/>
+                <textarea name="" id="" cols="30" rows="5" className='rounded-xl py-1 pl-4 text-black outline-none' {...register('textarea')}/>
               </div>
               <div className='border-2 border-green-900 flex flex-col  space-y-2'>
                 <label htmlFor="" className='text-xl pl-2 font-bigtext'>Signature</label>
