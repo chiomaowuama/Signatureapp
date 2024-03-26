@@ -1,13 +1,21 @@
 import React, { useRef } from 'react'
 import Popup from 'reactjs-popup'
 import SignaturePad from "react-signature-canvas";
+// import getTrimmedCanvas from "react-signature-canvas"
 
 
 function AllDocument() {
-  const sigCanvas = useRef({})
+  const sigCanvas = useRef({});
+  // getTrimmedCanvas()
 
   const clear = () =>sigCanvas.current.clear()
   // console.log(SignaturePad)
+
+  const save = () =>
+
+  console.log()
+
+  console.log(sigCanvas.getTrimmedCanvas().toDataURL("image/png"));
   return (
     <>
    <div className=' landscape w-full h-screen'>
@@ -39,6 +47,7 @@ function AllDocument() {
             <div className='w-full flex '>
             <button onClick={clear} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>clear</button>
             <button onClick={close} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>close</button>
+            <button onClick={save} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>save</button>
             </div>
             </div>
             </>
