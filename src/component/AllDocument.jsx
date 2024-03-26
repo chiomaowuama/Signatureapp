@@ -1,36 +1,30 @@
-import React, { useRef, useState } from 'react'
+import React, { useContext, useRef, useState } from 'react'
 import Popup from 'reactjs-popup'
 import SignaturePad from "react-signature-canvas";
 import getTrimmedCanvas from "react-signature-canvas"
-import { useEffect } from 'react';
+import AllSignature from '../context/AllSignature';
 
 
 
 function AllDocument() {
-  const sigCanvas = useRef({});
+  // const sigCanvas = useRef({});
+  const {sigCanvas, saved, clear, Allfiles}= useContext(AllSignature)
   const [ file, setFile] = useState([])
-  const [signs, setSigns] = useState([])
-  
-  const clear = () =>sigCanvas.current.clear()
-  
+  // const [signs, setSigns] = useState([])
 
+
+  const cleared = () =>{
+    clear()
+  }
+  
   const save = () => {
-    const trimCanvas = sigCanvas.current.getTrimmedCanvas();
-    const trimmedCanvas = trimCanvas.toDataURL("image/png");
-    setSigns(prevSign => [...prevSign, trimmedCanvas])
-    console.log(signs)
+    saved()
   }
   const handleAllChanges = (e) =>{
-    const selectedFile = e.target.value
-    setFile(prevFile => [...prevFile, selectedFile])
+    Allfiles(e)
   }
 
-  const result = file.map((filename, index) =>({
-    filename,
-    signno:signs[index]
-
-  }))
-  console.log(result)
+  
 
 
   return (
@@ -66,7 +60,7 @@ function AllDocument() {
             <div className='lg:w-full w-80 h-96 lg:h-4/5'>
             <SignaturePad canvasProps={{ className:"bg-white w-full h-full "}} ref={sigCanvas} />
             <div className='w-full flex '>
-            <button onClick={clear} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>clear</button>
+            <button onClick={cleared} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>clear</button>
             <button onClick={close} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>close</button>
             <button onClick={save} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>save</button>
             </div>
