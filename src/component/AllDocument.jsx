@@ -9,12 +9,11 @@ function AllDocument() {
   // getTrimmedCanvas()
 
   const clear = () =>sigCanvas.current.clear()
+  // const close = () =>sigCanvas.current.close()
   // console.log(SignaturePad)
 
   const save = () =>
-
-  console.log()
-
+  // console.log(sigCanvas.toDataURL("image/png "));
   console.log(sigCanvas.getTrimmedCanvas().toDataURL("image/png"));
   return (
     <>
@@ -43,7 +42,7 @@ function AllDocument() {
            {close =>(
             <>
             <div className='lg:w-full w-80 h-96 lg:h-4/5'>
-            <SignaturePad canvasProps={{ className:"bg-white w-full h-full "}} ref={sigCanvas} />
+            <SignaturePad canvasProps={{ className:" w-full h-full "}} ref={sigCanvas} />
             <div className='w-full flex '>
             <button onClick={clear} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>clear</button>
             <button onClick={close} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>close</button>
