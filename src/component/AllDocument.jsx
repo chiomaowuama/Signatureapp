@@ -1,4 +1,4 @@
-import React, { useRef } from 'react'
+import React, { useRef, useState } from 'react'
 import Popup from 'reactjs-popup'
 import SignaturePad from "react-signature-canvas";
 import getTrimmedCanvas from "react-signature-canvas"
@@ -6,6 +6,7 @@ import getTrimmedCanvas from "react-signature-canvas"
 
 function AllDocument() {
   const sigCanvas = useRef({});
+  const [ file, setFile] = useState()
   
   const clear = () =>sigCanvas.current.clear()
 
@@ -13,13 +14,20 @@ function AllDocument() {
     const trimmedCanvas = sigCanvas.current.getTrimmedCanvas();
     console.log(trimmedCanvas.toDataURL("image/png"));
   }
+  const Allfiles = (data) =>{
+    console.log(data)
+  }
 
   return (
     <>
    <div className=' landscape w-full h-screen'>
       <div className='landscapes   w-full h-full flex  flex-col justify-center items-center '>
-        <div className='w-4/6 text-2xl lg:text-4xl text-white capitalize font-bigtext  px-2 '>
-          <p><span className='text-5xl hover:text-red-800 cursor'>S</span>igns understands that a signature is your unique identity. The opportunity to help you discover what identity best works for you is our goal, click here to create your forever signature</p>
+        <div className='w-4/6 mb-5 text-2xl lg:text-3xl text-white capitalize font-bigtext  px-2'>
+          <p><span className='text-5xl hover:text-red-800 cursor'>S</span>igns allows you upload files of any kind and stores them for you.</p>
+          <input type="file" name="" id=""  className=" border-2 border-white w-full" onChange={Allfiles(date)} />
+        </div>
+        <div className='w-4/6 text-2xl lg:text-3xl text-white capitalize font-bigtext  px-2 '>
+          <p>Here is the opportunity discover what best works for you click here to create your forever signature</p>
         </div>
        
           <Popup modal trigger={
@@ -41,7 +49,7 @@ function AllDocument() {
            {close =>(
             <>
             <div className='lg:w-full w-80 h-96 lg:h-4/5'>
-            <SignaturePad canvasProps={{ className:" w-full h-full "}} ref={sigCanvas} />
+            <SignaturePad canvasProps={{ className:"bg-white w-full h-full "}} ref={sigCanvas} />
             <div className='w-full flex '>
             <button onClick={clear} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>clear</button>
             <button onClick={close} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>close</button>
