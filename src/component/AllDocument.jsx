@@ -1,9 +1,12 @@
-import React from 'react'
+import React, { useRef } from 'react'
 import Popup from 'reactjs-popup'
 import SignaturePad from "react-signature-canvas";
 
 
 function AllDocument() {
+  const sigCanvas = useRef({})
+
+  const clear = () =>sigCanvas.current.clear()
   // console.log(SignaturePad)
   return (
     <>
@@ -25,9 +28,21 @@ function AllDocument() {
             
             
             <p className='absolute top-2  z-10 left-2 font-bigtext font-semibold tracking-wider text-2xl cursor-pointer hover:text-red-700 text-white'>clickhere</p>
-          </div>} >
-            {/* <h1 className='w-full p-4 bg-white text-xl'>hello</h1> */}
-            <SignaturePad canvasProps={{ className:" border-2 border-red-600 bg-white lg:w-full w-4/5  h-96 mx-auto "}} />
+          </div>}
+          closeOnDocumentClick={false}
+           >
+            {/* the popup allowa us to pass a function as its child , this child then has close as a parameter . this close will now handle the */}
+           {close =>(
+            <>
+            <div className='lg:w-full w-80 h-96 lg:h-4/5'>
+            <SignaturePad canvasProps={{ className:"bg-white w-full h-full "}} ref={sigCanvas} />
+            <div className='w-full flex '>
+            <button onClick={clear} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>clear</button>
+            <button onClick={close} className='w-1/2 bg-white outline-none border-t-2 border-darkblues'>close</button>
+            </div>
+            </div>
+            </>
+           )}
             </Popup>
          
       </div>

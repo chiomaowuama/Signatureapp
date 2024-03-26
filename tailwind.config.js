@@ -5,7 +5,11 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      colors:{
+        'darkblues': 'rgb(31, 31, 44)'
+      }
+    },
     fontFamily:{
       smallertext:["Bungee Inline"],
       bigtext:["Pragati Narrow"],
