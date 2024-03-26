@@ -1,20 +1,19 @@
 import React, { useRef } from 'react'
 import Popup from 'reactjs-popup'
 import SignaturePad from "react-signature-canvas";
-// import getTrimmedCanvas from "react-signature-canvas"
+import getTrimmedCanvas from "react-signature-canvas"
 
 
 function AllDocument() {
   const sigCanvas = useRef({});
-  // getTrimmedCanvas()
-
+  
   const clear = () =>sigCanvas.current.clear()
-  // const close = () =>sigCanvas.current.close()
-  // console.log(SignaturePad)
 
-  const save = () =>
-  // console.log(sigCanvas.toDataURL("image/png "));
-  console.log(sigCanvas.getTrimmedCanvas().toDataURL("image/png"));
+  const save = () => {
+    const trimmedCanvas = sigCanvas.current.getTrimmedCanvas();
+    console.log(trimmedCanvas.toDataURL("image/png"));
+  }
+
   return (
     <>
    <div className=' landscape w-full h-screen'>
