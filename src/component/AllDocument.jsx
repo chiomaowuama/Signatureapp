@@ -6,17 +6,25 @@ import getTrimmedCanvas from "react-signature-canvas"
 
 function AllDocument() {
   const sigCanvas = useRef({});
-  const [ file, setFile] = useState()
+  const [ file, setFile] = useState([])
+  const [signs, setSigns] = useState([])
   
   const clear = () =>sigCanvas.current.clear()
+  
 
   const save = () => {
-    const trimmedCanvas = sigCanvas.current.getTrimmedCanvas();
-    console.log(trimmedCanvas.toDataURL("image/png"));
+    const trimCanvas = sigCanvas.current.getTrimmedCanvas();
+    const trimmedCanvas = trimCanvas.toDataURL("image/png");
+    setSigns(prevSign => [...prevSign, trimmedCanvas])
+    console.log(signs)
   }
-  const Allfiles = (data) =>{
-    console.log(data)
+  const handleAllChanges = (e) =>{
+    const selectedFile = e.target.value
+    setFile(prevFile => [...prevFile, selectedFile])
   }
+  // console.log(file)
+  // console.log(allFiles)
+ 
 
   return (
     <>
@@ -24,7 +32,7 @@ function AllDocument() {
       <div className='landscapes   w-full h-full flex  flex-col justify-center items-center '>
         <div className='w-4/6 mb-5 text-2xl lg:text-3xl text-white capitalize font-bigtext  px-2'>
           <p><span className='text-5xl hover:text-red-800 cursor'>S</span>igns allows you upload files of any kind and stores them for you.</p>
-          <input type="file" name="" id=""  className=" border-2 border-white w-full" onChange={Allfiles(date)} />
+          <input type="file" name="" id=""  className=" border-2 border-white w-full" onChange={handleAllChanges} />
         </div>
         <div className='w-4/6 text-2xl lg:text-3xl text-white capitalize font-bigtext  px-2 '>
           <p>Here is the opportunity discover what best works for you click here to create your forever signature</p>
