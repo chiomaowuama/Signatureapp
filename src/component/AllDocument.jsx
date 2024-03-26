@@ -2,6 +2,8 @@ import React, { useRef, useState } from 'react'
 import Popup from 'reactjs-popup'
 import SignaturePad from "react-signature-canvas";
 import getTrimmedCanvas from "react-signature-canvas"
+import { useEffect } from 'react';
+
 
 
 function AllDocument() {
@@ -22,8 +24,17 @@ function AllDocument() {
     const selectedFile = e.target.value
     setFile(prevFile => [...prevFile, selectedFile])
   }
-  // console.log(file)
-  // console.log(allFiles)
+  // function adding(){
+  //   const appendingFile = appendErrors
+  // }
+  const result = file.map((filename, index) =>({
+    filename,
+    signno:signs[index]
+
+  }))
+  console.log(result)
+  console.log(signs)
+  console.log(file)
  
 
   return (
