@@ -24,18 +24,14 @@ function AllDocument() {
     const selectedFile = e.target.value
     setFile(prevFile => [...prevFile, selectedFile])
   }
-  // function adding(){
-  //   const appendingFile = appendErrors
-  // }
+
   const result = file.map((filename, index) =>({
     filename,
     signno:signs[index]
 
   }))
   console.log(result)
-  console.log(signs)
-  console.log(file)
- 
+
 
   return (
     <>
