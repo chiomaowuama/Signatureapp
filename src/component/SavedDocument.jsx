@@ -17,8 +17,9 @@ function SavedDocument() {
         {storedResults.map(function(storedResult){
           return(
             <div className='border-2 border-yellow-600 w-2/5 h-2/5'>
-            <img src="" alt="" srcset="" />
-            <img src="" alt="" srcset="" />
+            <p>{storedResult.filename}</p>
+            <p>{storedResult.signno}</p>
+            {/* <img src={storedResult.signno} alt="" srcset="" /> */}
           </div>
           )
 
