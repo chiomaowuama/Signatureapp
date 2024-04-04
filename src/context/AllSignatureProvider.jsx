@@ -28,11 +28,15 @@ const AllSignatureProvider = ({children}) =>{
     SetFile(prevFile => [...prevFile, selectedFile])
     console.log(file)
   }
+  // for base 64converstion i will have to convert it before i turn it into an object
+
+  
   const result = file.map((filename, index) =>({
     filename,
     signno:signs[index]
 
   }))
+
   const resultArray = (result) =>{
     localStorage.setItem('myresult', JSON.stringify(result))
   }
@@ -41,6 +45,7 @@ const AllSignatureProvider = ({children}) =>{
   console.log(storedResults);
   useEffect(()=>{
     resultArray(result)
+
   })
   return (
   <AllSignature.Provider value={{sigCanvas, saved, clear, Allfiles, storedResults}}>
