@@ -10,6 +10,7 @@ const AllSignatureProvider = ({children}) =>{
   const sigCanvas = useRef({});
   const [file, SetFile] = useState([]);
   const [signs, setSigns] = useState([])
+
   
 
 
@@ -26,11 +27,42 @@ const AllSignatureProvider = ({children}) =>{
   const Allfiles = (e) =>{
     const selectedFile = e.target.value
     SetFile(prevFile => [...prevFile, selectedFile])
-    console.log(file)
+    // console.log(file)
+    const fileOne = file;
+    UplaodedImage(fileOne)
+
   }
   // for base 64converstion i will have to convert it before i turn it into an object
+  const UplaodedImage = async(fileOne) =>{
+    const base64 = await convetBase64(fileOne);
+    console.log(base64)
+  }
+ const convetBase64 = (fileOne) =>{
+  return new Promise((resolve, reject) => {
+  const fileReader = new FileReader()
+  const allthesefiles = fileReader.toDataURL(fileOne)
+  console.log(allthesefiles)
+  })
 
-  
+ }
+  // const GettingBase64 (file) =>{
+  //   return new Promise((resolve, reject) => {
+  //     const fileReader = new FileReader();
+  //     fileReader.readAsDataURL
+
+  //     fileReader.onload = () =>(
+  //       resolve(fileReader.result)
+  //     );
+
+  //     fileReader.onerror = (error) =>(
+  //       reject(error)
+  //     )
+  //   })
+  //   // console.log(OneFile)
+  // }
+
+
+  //  the end 
   const result = file.map((filename, index) =>({
     filename,
     signno:signs[index]
@@ -45,7 +77,7 @@ const AllSignatureProvider = ({children}) =>{
   console.log(storedResults);
   useEffect(()=>{
     resultArray(result)
-
+  
   })
   return (
   <AllSignature.Provider value={{sigCanvas, saved, clear, Allfiles, storedResults}}>
