@@ -25,7 +25,7 @@ const AllSignatureProvider = ({children}) =>{
     console.log(signs)
   }
   const Allfiles = async(e) =>{
-    const selectedFile = e.target.files;
+    const selectedFile = e.target.files[0];
     SetFile(prevFile => [...prevFile, selectedFile]);
     // console.log(file)
     // const fileOne = file;
