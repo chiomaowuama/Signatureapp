@@ -60,11 +60,11 @@ const AllSignatureProvider = ({children}) =>{
 
   }))
 
-  const resultArray = (result) =>{
-    localStorage.setItem('myresult', JSON.stringify(result))
-  }
+  // const resultArray = (result) =>{
+  //   localStorage.setItem('myresult', JSON.stringify(result))
+  // }
 
-  const storedResults = JSON.parse(localStorage.getItem('myresult'))
+  // const storedResults = JSON.parse(localStorage.getItem('myresult'))
   console.log(storedResults);
   useEffect(()=>{
     resultArray(result)
