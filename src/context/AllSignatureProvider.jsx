@@ -24,42 +24,32 @@ const AllSignatureProvider = ({children}) =>{
     // console.log(trimmedCanvas)
     console.log(signs)
   }
-  const Allfiles = (e) =>{
-    const selectedFile = e.target.value
-    SetFile(prevFile => [...prevFile, selectedFile])
+  const Allfiles = async(e) =>{
+    const selectedFile = e.target.files;
+    SetFile(prevFile => [...prevFile, selectedFile]);
     // console.log(file)
-    const fileOne = file;
-    UplaodedImage(fileOne)
+    // const fileOne = file;
+    // const base64 = await convertBase64(file);
+    console.log(selectedFile)
 
   }
   // for base 64converstion i will have to convert it before i turn it into an object
-  const UplaodedImage = async(fileOne) =>{
-    const base64 = await convetBase64(fileOne);
-    console.log(base64)
-  }
- const convetBase64 = (fileOne) =>{
-  return new Promise((resolve, reject) => {
-  const fileReader = new FileReader()
-  const allthesefiles = fileReader.toDataURL(fileOne)
-  console.log(allthesefiles)
-  })
 
- }
-  // const GettingBase64 (file) =>{
+  // const convertBase64 = (file) => {
   //   return new Promise((resolve, reject) => {
   //     const fileReader = new FileReader();
-  //     fileReader.readAsDataURL
+  //     fileReader.readAsDataURL(file);
 
-  //     fileReader.onload = () =>(
-  //       resolve(fileReader.result)
-  //     );
+  //     fileReader.onload = () => {
+  //       resolve(fileReader.result);
+  //     };
 
-  //     fileReader.onerror = (error) =>(
-  //       reject(error)
-  //     )
-  //   })
-  //   // console.log(OneFile)
-  // }
+  //     fileReader.onerror = (error) => {
+  //       reject(error);
+  //     };
+  //   });
+  // };
+
 
 
   //  the end 
