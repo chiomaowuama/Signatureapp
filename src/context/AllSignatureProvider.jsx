@@ -26,29 +26,30 @@ const AllSignatureProvider = ({children}) =>{
   }
   const Allfiles = async(e) =>{
     const selectedFile = e.target.files[0];
-    SetFile(prevFile => [...prevFile, selectedFile]);
     // console.log(file)
     // const fileOne = file;
-    // const base64 = await convertBase64(file);
-    console.log(selectedFile)
-
+    const base64 = await convertBase64(selectedFile);
+    SetFile(prevFile => [...prevFile, base64]);
+    console.log(base64)
+    
   }
   // for base 64converstion i will have to convert it before i turn it into an object
+  
+  const convertBase64 = (selectedFile) => {
+    return new Promise((resolve, reject) => {
+      const fileReader = new FileReader();
+      fileReader.readAsDataURL(selectedFile);
+      // console.log(fileReader)
+      
+      fileReader.onload = () => {
+        resolve(fileReader.result);
+      };
 
-  // const convertBase64 = (file) => {
-  //   return new Promise((resolve, reject) => {
-  //     const fileReader = new FileReader();
-  //     fileReader.readAsDataURL(file);
-
-  //     fileReader.onload = () => {
-  //       resolve(fileReader.result);
-  //     };
-
-  //     fileReader.onerror = (error) => {
-  //       reject(error);
-  //     };
-  //   });
-  // };
+      fileReader.onerror = (error) => {
+        reject('sorry there is a porblem', error);
+      };
+    });
+  };
 
 
 
