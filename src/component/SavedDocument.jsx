@@ -6,7 +6,7 @@ import AllSignature from '../context/AllSignature';
 
 function SavedDocument() {
   const{storedResults} = useContext(AllSignature)
-  const [ baseimage, setBaseimage] = useState()
+  const [ baseimage, setBaseimage] = useState({})
   // console.log('heloo');
 
   useEffect(() => {
