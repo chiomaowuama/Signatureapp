@@ -64,8 +64,11 @@ const AllSignatureProvider = ({children}) =>{
   const resultArray = (result) =>{
     console.log(result)
     localStorage.setItem('myresult', JSON.stringify(result))
-    
-  }
+    // if(result >= 2){
+      console.log(result)
+    // }
+  } 
+
 
   const storedResults = JSON.parse(localStorage.getItem('myresult'))
   useEffect(()=>{
