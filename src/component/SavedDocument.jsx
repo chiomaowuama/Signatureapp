@@ -6,22 +6,23 @@ import AllSignature from '../context/AllSignature';
 
 function SavedDocument() {
   const{storedResults} = useContext(AllSignature)
-  const [ baseimage, setBaseimage] = useState({})
+  const [ baseimages, setBaseimages] = useState([])
   // console.log('heloo');
 
+  console.log(baseimages);
+
+  
   useEffect(() => {
-    setBaseimage(storedResults)
-    console.log( baseimage);
+    setBaseimages(storedResults)
   })
   return (
     <div className=' landscape w-full h-screen'>
       <div className='landscapes   w-full h-full flex  flex-col justify-center items-center '>
-        {storedResults.map(function(storedResult){
+        {baseimages.map(function(baseimage){
           return(
             <div className='border-2 border-yellow-600 w-2/5 h-2/5'>
-            {/* <p>{storedResult.filename}</p> */}
-            {/* <p>{storedResult.signno}</p> */}
             <img src={baseimage.filename} alt=" hello"/>
+            <img src={baseimage.signno} alt="" />
             </div>
           )
 
