@@ -5,7 +5,7 @@ import AllSignature from '../context/AllSignature';
 // import { Result } from 'postcss';
 
 function SavedDocument() {
-  // const{storedResults} = useContext(AllSignature)
+  const{storedResults} = useContext(AllSignature)
   // console.log('heloo');
 
   // useEffect(() => {

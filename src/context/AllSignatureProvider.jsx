@@ -60,20 +60,21 @@ const AllSignatureProvider = ({children}) =>{
 
   }))
 
-  console.log(result);
+  // console.log(result);
   const resultArray = (result) =>{
     console.log(result)
     localStorage.setItem('myresult', JSON.stringify(result))
+    
   }
 
-  // const storedResults = JSON.parse(localStorage.getItem('myresult'))
+  const storedResults = JSON.parse(localStorage.getItem('myresult'))
   useEffect(()=>{
     resultArray(result)
   
     // dont forget to add storedResults to the values u sending
   })
   return (
-  <AllSignature.Provider value={{sigCanvas, saved, clear, Allfiles}}>
+  <AllSignature.Provider value={{sigCanvas, saved, clear, Allfiles, storedResults}}>
     {children}
   </AllSignature.Provider>
   )
