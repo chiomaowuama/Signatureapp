@@ -22,7 +22,7 @@ function SavedDocument() {
           return(
             <div className='border-2 border-yellow-600 w-2/5 h-2/5'>
             <img src={baseimage.filename} alt=" hello"/>
-            <img src={baseimage.signno} alt="" />
+            <img src={baseimage?.signno} alt="hi" />
             </div>
           )
 
